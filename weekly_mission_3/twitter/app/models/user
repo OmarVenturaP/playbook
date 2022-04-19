@@ -19,6 +19,12 @@ class User {
     get getLastUpdate() {     
         return this.lastUpdate;
     }
+    set setUsername(username) {
+        this.username = username;
+    }
+    set setBio(bio) {
+        this.bio = bio;
+    }
 }
 
 module.exports = User

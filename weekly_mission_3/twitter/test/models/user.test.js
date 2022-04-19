@@ -1,5 +1,7 @@
+const User = require('../../app/models/user');
+
 describe('Unit Test for User  class', () => {
-    test('Create an user objectr', () => {
+    test('Create an user object', () => {
         const user = new User(5, "OmarVentura", "Omar Ventura", "full-Stack Jr in progress", "18/04/22", "19/04/22");
         expect(user.id).toBe(5);
         expect(user.username).toBe("OmarVentura");

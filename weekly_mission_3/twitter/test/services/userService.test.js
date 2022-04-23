@@ -25,7 +25,7 @@ describe('Test for user services', () => {
         const user1 = UserService.create(5, "OmarVentura1", "Omar");
         const user2 = UserService.create(5, "OmarVentura2", "Omar");
         const user3 = UserService.create(5, "OmarVentura3", "Omar");
-        const usernames = UserService.getUsernames([user1, user2, user3]);
+        const usernames = UserService.getAllUsernames([user1, user2, user3]);
         expect(usernames).toContain("OmarVentura1");
         expect(usernames).toContain("OmarVentura2");
         expect(usernames).toContain("OmarVentura3");

@@ -10,6 +10,9 @@ class UserService {
     static updateUsername(user, username) {
         user.username = username;
     }
+    static getUsernames(users) {
+        return users.map(user => user.username);
+    }
 }
 
 module.exports = UserService;

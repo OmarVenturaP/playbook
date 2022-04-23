@@ -9,6 +9,9 @@ class UserView {
         else if(Object.keys(payload).some(key => payload[key] === null)){
             return {error:"necesitan tener un valor válido"}
         }
-}
+        if(!keys.every(key=>Object.keys(payload).includes(key))){
+            return {error:"necesitan tener un valor válido"}
+        }
+    }
 }
 module.exports = UserView;

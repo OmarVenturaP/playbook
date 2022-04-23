@@ -1,4 +1,4 @@
-const User = require('./../models/user');
+const UserService = require('./../services/userService');
 
 class UserView {
     static createUser(payload) {
@@ -12,6 +12,8 @@ class UserView {
         if(!keys.every(key=>Object.keys(payload).includes(key))){
             return {error:"necesitan tener un valor válido"}
         }
+        const newUser = UserService.create(payload.id,payload.username,payload.name)
+        return {name:newUser.name , username:newUser.username , id:newUser.id}
     }
 }
 module.exports = UserView;

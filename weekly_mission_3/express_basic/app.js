@@ -18,6 +18,11 @@ app.get('/explorersInNode', (req, res) => {
     const explorer = {name: "Explorer", msg: "Hello"}
     res.send(explorer);
 })
+//llamando query params
+app.get('/explorers/:explorerName', (req, res) => {
+    req.params = {explorerName: "OmarVentura"}
+    res.send(req.params)
+})
 
 //Con listen inicializamos esta app
 app.listen(port, () => {
